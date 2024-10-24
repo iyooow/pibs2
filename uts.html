@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="profile-section">
+            <img src="profill.jpeg" alt="Foto Profil" class="profile-img">
+            <h2>Profil Giovanni</h2>
+        </div>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" id="biodata"><i class="fas fa-user"></i> Biodata</a></li>
+                <li><a href="#" id="pendidikan"><i class="fas fa-graduation-cap"></i> Pendidikan</a></li>
+                <li><a href="#" id="pengalaman"><i class="fas fa-briefcase"></i> Pengalaman</a></li>
+                <li><a href="#" id="publikasi"><i class="fas fa-book"></i> Publikasi</a></li>
+            </ul>
+        </nav>
+
+        <section class="content">
+            <h2>Biodata</h2>
+            <p><strong>NIM:</strong> 2023081063</p>
+            <p><strong>Nama:</strong> Giovanni Davin Ardiansyah</p>
+            <p><strong>Agama:</strong> Islam</p>
+            <p><strong>Tanggal Lahir:</strong> 27 Agustus 2005</p>
+            <p><strong>Tempat Lahir:</strong> Solo</p>
+        </section>
+
+        <aside class="sidebar-right">
+            <h3>Hobi:</h3>
+            <ul>
+                <li>Bulu tangkis</li>
+                <li>Bola</li>
+                <li>Voli</li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="grid-container">
+            <p>Twitter: -  </p>
+            <p>FB: -</p> 
+            <p>Instagram: giodavin</p>
+        </div>
+        <p>&copy; Copyright 2020. All Rights Reserved.</p>
+        <p>NAMA WEB | Slogan/Keterangan/Informasi Web</p>
+    </footer>
+
+    <script>
+        // Navigation interactions
+        const biodataLink = document.getElementById('biodata');
+        const pendidikanLink = document.getElementById('pendidikan');
+        const pengalamanLink = document.getElementById('pengalaman');
+
+        function changeSection(content) {
+            document.querySelector('section').innerHTML = content;
+        }
+
+        biodataLink.addEventListener('click', function() {
+            changeSection(`
+                <h2>Biodata</h2>
+                <p><strong>NIM:</strong> 2023081063</p>
+                <p><strong>Nama:</strong> Giovanni Davin Ardiansyah</p>
+                <p><strong>Agama:</strong> Islam</p>
+                <p><strong>Tanggal Lahir:</strong> 27 Agustus 2005</p>
+                <p><strong>Tempat Lahir:</strong> Solo</p>
+            `);
+        });
+
+        pendidikanLink.addEventListener('click', function() {
+            changeSection(`
+                <h2>Pendidikan</h2>
+                <ul>
+                    <li><strong>SMK Letris 2</strong></li>
+                    <li><strong>MTS AL-Mursyidiyyah</strong></li>
+                    <li><strong>SDI At-taqwa</strong></li>
+                </ul>
+            `);
+        });
+
+        pengalamanLink.addEventListener('click', function() {
+            changeSection(`
+                <h2>Pengalaman</h2>
+                <ul>
+                    <li><strong>PKL di PT PAM JAYA</strong></li>
+                    <li><strong>Panitia GIDHub 2023</strong></li>
+                    <li><strong>Panitia Prograth 2024</strong></li>
+                </ul>
+            `);
+        });
+    </script>
+
+</body>
+</html>
